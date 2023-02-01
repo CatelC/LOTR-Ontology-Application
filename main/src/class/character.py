@@ -1,20 +1,25 @@
-from equipment import Equipment
-from combat import *
+from owlready2 import *
+onto = get_ontology("file://lotr.owl").load()
 
 
-class Character():
+with onto:
 
-    def __init__(self, level: int, classe, race, equipmentList: list[Equipment], statList, name="Radis Moisi"):
-        self.name = name
-        self.level = level
-        self.classe = classe
-        self.race = race
-        self.equipmentList = equipmentList
-        self.statList = statList
+    class Personnage(Thing):
 
-    def attack(self, weapon, enemy):
-        return f"{self.name} attacks {enemy} with {weapon}, causing X damage"
+        """
+        def __init__(self, level: int, classe, race, equipmentList: list[Equipment], statList, name="Radis Moisi"):
+            self.name = name
+            self.level = level
+            self.classe = classe
+            self.race = race
+            self.equipmentList = equipmentList
+            self.statList = statList
+        """
 
-    def spellcast(self, spell, enemy):
-        return f"{self.name} cast {spell.name} to {enemy}"
+        
+        def attack(self, weapon, enemy):
+            return f"{self.name} attacks {enemy} with {weapon}, causing X damage"
+
+        def spellcast(self, spell, enemy):
+            return f"{self.name} cast {spell.name} to {enemy}"
 
