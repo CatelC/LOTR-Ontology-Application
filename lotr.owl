@@ -46,7 +46,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estAlliéDe">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -81,7 +80,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estDeClasse">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Personnage"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Classe"/>
     </owl:ObjectProperty>
@@ -139,17 +137,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortablePar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortablePar">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#peutPorter"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Équipement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Classe"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortePar -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortePar">
@@ -161,12 +148,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estRecompenseDe -->
+    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estRecompensePar -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estRecompenseDe">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estRecompensePar">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Objet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Objet"/>
     </owl:ObjectProperty>
     
 
@@ -176,15 +163,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#faitLaQuete">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Equipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#peutPorter -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#peutPorter">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Classe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Équipement"/>
     </owl:ObjectProperty>
     
 
@@ -517,19 +495,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arc -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arc">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortablePar"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Archer"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Rôdeur"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme_à_distance"/>
     </owl:Class>
     
@@ -538,12 +503,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Archer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Archer">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#peutPorter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme_à_distance"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Classe"/>
     </owl:Class>
     
@@ -569,19 +528,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme_combat_rapproché">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#PortéeArmeEnPas"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#PortéeArmeEnPas"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme"/>
     </owl:Class>
@@ -600,19 +564,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme_à_distance">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#PortéeArmeEnPas"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:minExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#PortéeArmeEnPas"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme"/>
     </owl:Class>
@@ -630,12 +599,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Armure_lourde -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Armure_lourde">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortablePar"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Guerrier_lourd"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Armure"/>
     </owl:Class>
     
@@ -714,14 +677,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Cheval -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Cheval">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Animal"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Château -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Château">
@@ -790,14 +745,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Dragon -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Dragon">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Animal"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Désert -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Désert">
@@ -817,28 +764,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Elfe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Elfe">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estAlliéDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Ent"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gobelin"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Orc"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Troll"/>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     </owl:Class>
     
@@ -847,28 +772,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Ent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Ent">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estAlliéDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Elfe"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gobelin"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Orc"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Troll"/>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     </owl:Class>
     
@@ -956,19 +859,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Flèche -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Flèche">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estPortablePar"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Archer"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Rôdeur"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Arme_à_distance"/>
     </owl:Class>
     
@@ -1030,14 +920,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Guerrier_monté -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Guerrier_monté">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Guerrier"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Habitations -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Habitations">
@@ -1086,37 +968,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Haradrim -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Haradrim">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Rohirim"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Humain"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Hobbit -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Hobbit">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estAlliéDe"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Ent"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Humain"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Nain"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     </owl:Class>
     
@@ -1125,20 +979,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Humain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Humain">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gobelin"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Orc"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Troll"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     </owl:Class>
     
@@ -1282,20 +1122,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Nain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Nain">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gobelin"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Orc"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Troll"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     </owl:Class>
     
@@ -1372,12 +1198,6 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Pays -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Pays">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#seTrouveDans"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Continent"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Lieu"/>
     </owl:Class>
     
@@ -1455,9 +1275,7 @@
 
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Non_joueur"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête"/>
     
 
 
@@ -1480,39 +1298,7 @@
 
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estAlliéDe"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Elfe"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Hobbit"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Humain"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Nain"/>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#estEnnemiDe"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gobelin"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Orc"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Troll"/>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Race"/>
     
 
 
@@ -1676,6 +1462,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Végétal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Élément_naturel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#cheval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#cheval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#dragon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#dragon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Animal"/>
     </owl:Class>
     
 
@@ -1871,14 +1673,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Détruire_Isengard -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Détruire_Isengard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête_secondaire"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Erebor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Erebor">
@@ -1947,7 +1741,7 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gris-Poil -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Gris-Poil">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Cheval"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#cheval"/>
     </owl:NamedIndividual>
     
 
@@ -2092,7 +1886,7 @@
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Smaug -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Smaug">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Dragon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#dragon"/>
     </owl:NamedIndividual>
     
 
@@ -2105,34 +1899,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Vaincre_le_Balrog -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Vaincre_le_Balrog">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête_secondaire"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Valinor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Valinor">
         <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Région"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Détruire_l&apos;Anneau_Unique -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Détruire_l&apos;Anneau_Unique">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Quête_principale"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#La_Communauté_de_l&apos;Anneau -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#La_Communauté_de_l&apos;Anneau">
-        <rdf:type rdf:resource="http://www.semanticweb.org/jeanb/ontologies/2023/0/untitled-ontology-5#Equipe"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
