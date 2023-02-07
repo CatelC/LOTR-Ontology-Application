@@ -13,7 +13,7 @@ def home():
 @app.route('/recherche', methods=['POST','GET'])
 def predict():
     if request.method == 'POST':
-        if request.form["img"]=="MoteurRecherche" :
+        if request.form["button"]=="home" :
             return redirect('/')
     return render_template('moteurRecherche.html')
     

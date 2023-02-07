@@ -1,7 +1,8 @@
+from owlready2 import *
+from launcher.py import onto
 
-class Equipment():
 
-    def __init__(self, name, type, statList):
-        self.name = name
-        self.type = type
-        self.statList = statList
+with onto:
+
+    class Personnage(Thing):
+        
