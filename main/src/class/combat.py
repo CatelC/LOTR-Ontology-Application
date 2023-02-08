@@ -1,4 +1,5 @@
 import random as rd
+from launcher import *
 
 class Spell:
 
@@ -9,6 +10,7 @@ class Spell:
         self.damage=damage
 
 class damage:
+
     def __init(self, max, min):
         self.min=min
         self.max=max
@@ -16,4 +18,11 @@ class damage:
     def value(self):
         return rd.randint(self.min,self.max)
 
+"""
+def getDamage(attaquant,ennemie):
+    
+    getPropertyOfIndividual(attaquant)
+    getPropertyOfIndividual(ennemie)
+    return val
+"""
         
